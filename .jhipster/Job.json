@@ -1,0 +1,24 @@
+{
+  "applications": "*",
+  "changelogDate": "20231109111818",
+  "dto": "mapstruct",
+  "entityTableName": "job",
+  "fields": [
+    {
+      "fieldName": "jobName",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Job",
+  "relationships": [
+    {
+      "otherEntityName": "character",
+      "otherEntityRelationshipName": "job",
+      "relationshipName": "character",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

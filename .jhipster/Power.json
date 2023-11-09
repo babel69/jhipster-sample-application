@@ -1,0 +1,24 @@
+{
+  "applications": "*",
+  "changelogDate": "20231109111918",
+  "dto": "mapstruct",
+  "entityTableName": "power",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Power",
+  "relationships": [
+    {
+      "otherEntityName": "character",
+      "otherEntityRelationshipName": "power",
+      "relationshipName": "character",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

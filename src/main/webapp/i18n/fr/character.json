@@ -1,0 +1,32 @@
+{
+  "jhipsterSampleApplicationApp": {
+    "character": {
+      "home": {
+        "title": "Characters",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Character",
+        "createOrEditLabel": "Créer ou éditer un Character",
+        "notFound": "Aucun Character trouvé"
+      },
+      "created": "Un nouveau Character a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Character avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Character avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Character {{ id }} ?"
+      },
+      "detail": {
+        "title": "Character"
+      },
+      "id": "ID",
+      "name": "Name",
+      "surname": "Surname",
+      "countryName": "Country Name",
+      "jobName": "Job Name",
+      "powerName": "Power Name",
+      "age": "Age",
+      "job": "Job",
+      "country": "Country",
+      "power": "Power"
+    }
+  }
+}

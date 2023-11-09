@@ -1,0 +1,37 @@
+entity Character{
+name String
+surname String
+countryName String
+jobName String
+powerName String
+age Integer
+
+}
+
+entity Country{
+name String
+countryNumber Integer
+}
+
+entity Job{
+jobName String
+}
+
+entity Power{
+name String
+}
+
+relationship OneToOne{
+Character to Job
+}
+
+relationship OneToOne{
+Character to Country
+}
+
+relationship OneToOne{
+Character to Power
+}
+
+dto Character, Job, Country, Power with mapstruct
+service Character, Job, Country, Power with serviceImpl
