@@ -13,6 +13,10 @@ name String
 countryNumber Integer
 }
 
+entity Skin{
+color String
+}
+
 entity Job{
 jobName String
 }
@@ -33,5 +37,9 @@ relationship OneToOne{
 Character to Power
 }
 
-dto Character, Job, Country, Power with mapstruct
-service Character, Job, Country, Power with serviceImpl
+relationship OneToOne{
+Character to Skin
+}
+
+dto Character, Job, Country, Power, Skin with mapstruct
+service Character, Job, Country, Power, Skin with serviceImpl
