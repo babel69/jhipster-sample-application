@@ -1,0 +1,28 @@
+{
+  "applications": "*",
+  "changelogDate": "20231109111718",
+  "dto": "mapstruct",
+  "entityTableName": "country",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "countryNumber",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Country",
+  "relationships": [
+    {
+      "otherEntityName": "character",
+      "otherEntityRelationshipName": "country",
+      "relationshipName": "character",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

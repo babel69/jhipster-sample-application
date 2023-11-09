@@ -1,0 +1,25 @@
+{
+  "jhipsterSampleApplicationApp": {
+    "power": {
+      "home": {
+        "title": "Powers",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Power",
+        "createOrEditLabel": "Créer ou éditer un Power",
+        "notFound": "Aucun Power trouvé"
+      },
+      "created": "Un nouveau Power a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Power avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Power avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Power {{ id }} ?"
+      },
+      "detail": {
+        "title": "Power"
+      },
+      "id": "ID",
+      "name": "Name",
+      "character": "Character"
+    }
+  }
+}
