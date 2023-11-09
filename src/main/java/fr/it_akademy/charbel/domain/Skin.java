@@ -7,13 +7,13 @@ import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 /**
- * A Country.
+ * A Skin.
  */
 @Entity
-@Table(name = "country")
+@Table(name = "skin")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 @SuppressWarnings("common-java:DuplicatedBlocks")
-public class Country implements Serializable {
+public class Skin implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -23,14 +23,11 @@ public class Country implements Serializable {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "name")
-    private String name;
-
-    @Column(name = "country_number")
-    private Integer countryNumber;
+    @Column(name = "color")
+    private String color;
 
     @JsonIgnoreProperties(value = { "job", "country", "power", "skin" }, allowSetters = true)
-    @OneToOne(fetch = FetchType.LAZY, mappedBy = "country")
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "skin")
     private Character character;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
@@ -39,7 +36,7 @@ public class Country implements Serializable {
         return this.id;
     }
 
-    public Country id(Long id) {
+    public Skin id(Long id) {
         this.setId(id);
         return this;
     }
@@ -48,30 +45,17 @@ public class Country implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return this.name;
+    public String getColor() {
+        return this.color;
     }
 
-    public Country name(String name) {
-        this.setName(name);
+    public Skin color(String color) {
+        this.setColor(color);
         return this;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getCountryNumber() {
-        return this.countryNumber;
-    }
-
-    public Country countryNumber(Integer countryNumber) {
-        this.setCountryNumber(countryNumber);
-        return this;
-    }
-
-    public void setCountryNumber(Integer countryNumber) {
-        this.countryNumber = countryNumber;
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public Character getCharacter() {
@@ -80,15 +64,15 @@ public class Country implements Serializable {
 
     public void setCharacter(Character character) {
         if (this.character != null) {
-            this.character.setCountry(null);
+            this.character.setSkin(null);
         }
         if (character != null) {
-            character.setCountry(this);
+            character.setSkin(this);
         }
         this.character = character;
     }
 
-    public Country character(Character character) {
+    public Skin character(Character character) {
         this.setCharacter(character);
         return this;
     }
@@ -100,10 +84,10 @@ public class Country implements Serializable {
         if (this == o) {
             return true;
         }
-        if (!(o instanceof Country)) {
+        if (!(o instanceof Skin)) {
             return false;
         }
-        return getId() != null && getId().equals(((Country) o).getId());
+        return getId() != null && getId().equals(((Skin) o).getId());
     }
 
     @Override
@@ -115,10 +99,9 @@ public class Country implements Serializable {
     // prettier-ignore
     @Override
     public String toString() {
-        return "Country{" +
+        return "Skin{" +
             "id=" + getId() +
-            ", name='" + getName() + "'" +
-            ", countryNumber=" + getCountryNumber() +
+            ", color='" + getColor() + "'" +
             "}";
     }
 }

@@ -79,6 +79,10 @@ export const CharacterDetail = () => {
             <Translate contentKey="jhipsterSampleApplicationApp.character.power">Power</Translate>
           </dt>
           <dd>{characterEntity.power ? characterEntity.power.id : ''}</dd>
+          <dt>
+            <Translate contentKey="jhipsterSampleApplicationApp.character.skin">Skin</Translate>
+          </dt>
+          <dd>{characterEntity.skin ? characterEntity.skin.id : ''}</dd>
         </dl>
         <Button tag={Link} to="/character" replace color="info" data-cy="entityDetailsBackButton">
           <FontAwesomeIcon icon="arrow-left" />{' '}

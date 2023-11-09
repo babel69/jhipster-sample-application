@@ -11,7 +11,8 @@
         "character": "Character",
         "country": "Country",
         "job": "Job",
-        "power": "Power"
+        "power": "Power",
+        "skin": "Skin"
       },
       "account": {
         "main": "Compte",

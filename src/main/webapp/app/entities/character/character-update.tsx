@@ -14,6 +14,8 @@ import { ICountry } from 'app/shared/model/country.model';
 import { getEntities as getCountries } from 'app/entities/country/country.reducer';
 import { IPower } from 'app/shared/model/power.model';
 import { getEntities as getPowers } from 'app/entities/power/power.reducer';
+import { ISkin } from 'app/shared/model/skin.model';
+import { getEntities as getSkins } from 'app/entities/skin/skin.reducer';
 import { ICharacter } from 'app/shared/model/character.model';
 import { getEntity, updateEntity, createEntity, reset } from './character.reducer';
 
@@ -28,6 +30,7 @@ export const CharacterUpdate = () => {
   const jobs = useAppSelector(state => state.job.entities);
   const countries = useAppSelector(state => state.country.entities);
   const powers = useAppSelector(state => state.power.entities);
+  const skins = useAppSelector(state => state.skin.entities);
   const characterEntity = useAppSelector(state => state.character.entity);
   const loading = useAppSelector(state => state.character.loading);
   const updating = useAppSelector(state => state.character.updating);
@@ -47,6 +50,7 @@ export const CharacterUpdate = () => {
     dispatch(getJobs({}));
     dispatch(getCountries({}));
     dispatch(getPowers({}));
+    dispatch(getSkins({}));
   }, []);
 
   useEffect(() => {
@@ -70,6 +74,7 @@ export const CharacterUpdate = () => {
       job: jobs.find(it => it.id.toString() === values.job.toString()),
       country: countries.find(it => it.id.toString() === values.country.toString()),
       power: powers.find(it => it.id.toString() === values.power.toString()),
+      skin: skins.find(it => it.id.toString() === values.skin.toString()),
     };
 
     if (isNew) {
@@ -87,6 +92,7 @@ export const CharacterUpdate = () => {
           job: characterEntity?.job?.id,
           country: characterEntity?.country?.id,
           power: characterEntity?.power?.id,
+          skin: characterEntity?.skin?.id,
         };
 
   return (
@@ -198,6 +204,22 @@ export const CharacterUpdate = () => {
                 <option value="" key="0" />
                 {powers
                   ? powers.map(otherEntity => (
+                      <option value={otherEntity.id} key={otherEntity.id}>
+                        {otherEntity.id}
+                      </option>
+                    ))
+                  : null}
+              </ValidatedField>
+              <ValidatedField
+                id="character-skin"
+                name="skin"
+                data-cy="skin"
+                label={translate('jhipsterSampleApplicationApp.character.skin')}
+                type="select"
+              >
+                <option value="" key="0" />
+                {skins
+                  ? skins.map(otherEntity => (
                       <option value={otherEntity.id} key={otherEntity.id}>
                         {otherEntity.id}
                       </option>

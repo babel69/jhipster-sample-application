@@ -121,6 +121,9 @@ export const Character = () => {
                 <th>
                   <Translate contentKey="jhipsterSampleApplicationApp.character.power">Power</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
+                <th>
+                  <Translate contentKey="jhipsterSampleApplicationApp.character.skin">Skin</Translate> <FontAwesomeIcon icon="sort" />
+                </th>
                 <th />
               </tr>
             </thead>
@@ -141,6 +144,7 @@ export const Character = () => {
                   <td>{character.job ? <Link to={`/job/${character.job.id}`}>{character.job.id}</Link> : ''}</td>
                   <td>{character.country ? <Link to={`/country/${character.country.id}`}>{character.country.id}</Link> : ''}</td>
                   <td>{character.power ? <Link to={`/power/${character.power.id}`}>{character.power.id}</Link> : ''}</td>
+                  <td>{character.skin ? <Link to={`/skin/${character.skin.id}`}>{character.skin.id}</Link> : ''}</td>
                   <td className="text-end">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`/character/${character.id}`} color="info" size="sm" data-cy="entityDetailsButton">

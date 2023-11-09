@@ -52,6 +52,7 @@ public class CacheConfiguration {
             createCache(cm, fr.it_akademy.charbel.domain.Country.class.getName());
             createCache(cm, fr.it_akademy.charbel.domain.Job.class.getName());
             createCache(cm, fr.it_akademy.charbel.domain.Power.class.getName());
+            createCache(cm, fr.it_akademy.charbel.domain.Skin.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

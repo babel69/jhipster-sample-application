@@ -51,6 +51,13 @@
       "relationshipName": "power",
       "relationshipSide": "left",
       "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "skin",
+      "otherEntityRelationshipName": "character",
+      "relationshipName": "skin",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
     }
   ],
   "searchEngine": "no",

@@ -4,6 +4,7 @@ import static fr.it_akademy.charbel.domain.CharacterTestSamples.*;
 import static fr.it_akademy.charbel.domain.CountryTestSamples.*;
 import static fr.it_akademy.charbel.domain.JobTestSamples.*;
 import static fr.it_akademy.charbel.domain.PowerTestSamples.*;
+import static fr.it_akademy.charbel.domain.SkinTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import fr.it_akademy.charbel.web.rest.TestUtil;
@@ -59,5 +60,17 @@ class CharacterTest {
 
         character.power(null);
         assertThat(character.getPower()).isNull();
+    }
+
+    @Test
+    void skinTest() throws Exception {
+        Character character = getCharacterRandomSampleGenerator();
+        Skin skinBack = getSkinRandomSampleGenerator();
+
+        character.setSkin(skinBack);
+        assertThat(character.getSkin()).isEqualTo(skinBack);
+
+        character.skin(null);
+        assertThat(character.getSkin()).isNull();
     }
 }

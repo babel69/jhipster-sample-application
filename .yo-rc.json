@@ -15,7 +15,7 @@
     "enableHibernateCache": true,
     "enableSwaggerCodegen": false,
     "enableTranslation": true,
-    "entities": ["Character", "Country", "Job", "Power"],
+    "entities": ["Character", "Skin", "Country", "Job", "Power"],
     "gitCompany": "",
     "jhiPrefix": "jhi",
     "jhipsterVersion": "8.0.0",

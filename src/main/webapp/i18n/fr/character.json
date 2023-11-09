@@ -26,7 +26,8 @@
       "age": "Age",
       "job": "Job",
       "country": "Country",
-      "power": "Power"
+      "power": "Power",
+      "skin": "Skin"
     }
   }
 }

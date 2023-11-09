@@ -1,0 +1,24 @@
+{
+  "applications": "*",
+  "changelogDate": "20231109111618",
+  "dto": "mapstruct",
+  "entityTableName": "skin",
+  "fields": [
+    {
+      "fieldName": "color",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Skin",
+  "relationships": [
+    {
+      "otherEntityName": "character",
+      "otherEntityRelationshipName": "skin",
+      "relationshipName": "character",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

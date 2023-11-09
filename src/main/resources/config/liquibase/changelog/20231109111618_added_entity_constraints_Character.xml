@@ -28,5 +28,12 @@
                                  referencedColumnNames="id"
                                  referencedTableName="power"
                                  />
+
+        <addForeignKeyConstraint baseColumnNames="skin_id"
+                                 baseTableName="character"
+                                 constraintName="fk_character__skin_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="skin"
+                                 />
     </changeSet>
 </databaseChangeLog>

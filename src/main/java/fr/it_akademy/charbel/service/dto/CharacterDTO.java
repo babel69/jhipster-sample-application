@@ -29,6 +29,8 @@ public class CharacterDTO implements Serializable {
 
     private PowerDTO power;
 
+    private SkinDTO skin;
+
     public Long getId() {
         return id;
     }
@@ -109,6 +111,14 @@ public class CharacterDTO implements Serializable {
         this.power = power;
     }
 
+    public SkinDTO getSkin() {
+        return skin;
+    }
+
+    public void setSkin(SkinDTO skin) {
+        this.skin = skin;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -144,6 +154,7 @@ public class CharacterDTO implements Serializable {
             ", job=" + getJob() +
             ", country=" + getCountry() +
             ", power=" + getPower() +
+            ", skin=" + getSkin() +
             "}";
     }
 }
