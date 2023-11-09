@@ -56,6 +56,11 @@ public class Character implements Serializable {
     @JoinColumn(unique = true)
     private Power power;
 
+    @JsonIgnoreProperties(value = { "character" }, allowSetters = true)
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(unique = true)
+    private Skin skin;
+
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
     public Long getId() {
@@ -185,6 +190,19 @@ public class Character implements Serializable {
 
     public Character power(Power power) {
         this.setPower(power);
+        return this;
+    }
+
+    public Skin getSkin() {
+        return this.skin;
+    }
+
+    public void setSkin(Skin skin) {
+        this.skin = skin;
+    }
+
+    public Character skin(Skin skin) {
+        this.setSkin(skin);
         return this;
     }
 

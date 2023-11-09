@@ -7,6 +7,7 @@ import Character from './character';
 import Country from './country';
 import Job from './job';
 import Power from './power';
+import Skin from './skin';
 /* jhipster-needle-add-route-import - JHipster will add routes here */
 
 export default () => {
@@ -18,6 +19,7 @@ export default () => {
         <Route path="country/*" element={<Country />} />
         <Route path="job/*" element={<Job />} />
         <Route path="power/*" element={<Power />} />
+        <Route path="skin/*" element={<Skin />} />
         {/* jhipster-needle-add-route-path - JHipster will add routes here */}
       </ErrorBoundaryRoutes>
     </div>

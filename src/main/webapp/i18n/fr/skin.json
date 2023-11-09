@@ -1,0 +1,25 @@
+{
+  "jhipsterSampleApplicationApp": {
+    "skin": {
+      "home": {
+        "title": "Skins",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Skin",
+        "createOrEditLabel": "Créer ou éditer un Skin",
+        "notFound": "Aucun Skin trouvé"
+      },
+      "created": "Un nouveau Skin a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Skin avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Skin avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Skin {{ id }} ?"
+      },
+      "detail": {
+        "title": "Skin"
+      },
+      "id": "ID",
+      "color": "Color",
+      "character": "Character"
+    }
+  }
+}

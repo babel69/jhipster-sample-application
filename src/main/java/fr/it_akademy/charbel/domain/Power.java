@@ -26,7 +26,7 @@ public class Power implements Serializable {
     @Column(name = "name")
     private String name;
 
-    @JsonIgnoreProperties(value = { "job", "country", "power" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "job", "country", "power", "skin" }, allowSetters = true)
     @OneToOne(fetch = FetchType.LAZY, mappedBy = "power")
     private Character character;
 

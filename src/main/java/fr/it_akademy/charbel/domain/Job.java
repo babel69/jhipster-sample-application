@@ -26,7 +26,7 @@ public class Job implements Serializable {
     @Column(name = "job_name")
     private String jobName;
 
-    @JsonIgnoreProperties(value = { "job", "country", "power" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "job", "country", "power", "skin" }, allowSetters = true)
     @OneToOne(fetch = FetchType.LAZY, mappedBy = "job")
     private Character character;
 
